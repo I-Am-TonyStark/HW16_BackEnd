@@ -1,7 +1,77 @@
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+    <display-name>Archetype Created Web Application</display-name>
+
+    <context-param>
+        <param-name>uploaded</param-name>
+        <param-value>upload/</param-value>
+        <description>uploaded files directory</description>
+    </context-param>
+
+    <filter>
+        <filter-name>uploadFilter</filter-name>
+        <filter-class>com.mamalimomen.controllers.filters.UploadFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>downloadFilter</filter-name>
+        <filter-class>com.mamalimomen.controllers.filters.DownloadFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>uploadFilter</filter-name>
+        <url-pattern>/upload</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>downloadFilter</filter-name>
+        <url-pattern>/download</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>com.mamalimomen.controllers.ProjectListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>upload</servlet-name>
+        <servlet-class>com.mamalimomen.controllers.servlets.UploadServlet</servlet-class>
+        <init-param>
+            <param-name>course</param-name>
+            <param-value>java</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>download</servlet-name>
+        <servlet-class>com.mamalimomen.controllers.servlets.DownloadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>search</servlet-name>
+        <servlet-class>com.mamalimomen.controllers.servlets.SearchServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>insert</servlet-name>
+        <servlet-class>com.mamalimomen.controllers.servlets.InsertServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>upload</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>download</servlet-name>
+        <url-pattern>/download</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>search</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>insert</servlet-name>
+        <url-pattern>/insert</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
 </web-app>

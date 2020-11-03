@@ -1,0 +1,27 @@
+02:37:09,711 INFO  [org.hibernate.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [
+	name: ogm-mongodb
+	...]
+02:37:09,854 INFO  [org.hibernate.Version] - HHH000412: Hibernate Core {5.3.6.Final}
+02:37:09,857 INFO  [org.hibernate.cfg.Environment] - HHH000206: hibernate.properties not found
+02:37:10,205 INFO  [org.hibernate.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+02:37:10,501 INFO  [org.hibernate.ogm.datastore.impl.DatastoreProviderInitiator] - OGM000016: NoSQL Datastore provider: org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider
+02:37:10,813 INFO  [org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider] - OGM001201: Connecting to MongoDB at localhost:27017 with a timeout set at 10000 millisecond(s)
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+02:37:10,965 INFO  [org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider] - OGM001207: Connecting to Mongo database named [HW16_BackEnd].
+02:37:11,284 INFO  [org.hibernate.ogm.dialect.impl.GridDialectInitiator] - OGM000017: Grid Dialect: org.hibernate.ogm.dialect.impl.BatchOperationsDelegator
+02:37:11,286 INFO  [org.hibernate.ogm.dialect.impl.GridDialectInitiator] - Grid dialect logs are disabled
+02:37:11,295 INFO  [org.hibernate.ogm.dialect.impl.GridDialectInitiator] - OGM000017: Grid Dialect: org.hibernate.ogm.dialect.impl.BatchOperationsDelegator
+02:37:11,295 INFO  [org.hibernate.ogm.dialect.impl.GridDialectInitiator] - Grid dialect logs are disabled
+02:37:11,311 INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.ogm.dialect.impl.OgmDialect
+02:37:11,338 WARN  [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator] - HHH000342: Could not obtain connection to query metadata : null
+02:37:11,338 INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.ogm.dialect.impl.OgmDialect
+02:37:11,348 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] - HHH000422: Disabling contextual LOB creation as connection was null
+02:37:12,412 INFO  [org.hibernate.ogm.cfg.impl.Version] - OGM000001: Hibernate OGM 5.4.0.Final
+02:37:14,038 INFO  [org.hibernate.ogm.transaction.impl.OgmJtaPlatformInitiator] - OGM000075: JBoss Transaction Manager (com.arjuna.ats.jta.TransactionManager) detected on classpath. Using JBossStandAloneJtaPlatform as JTAPlatform implementation
+02:37:33,646 INFO  [com.arjuna.ats.arjuna] - ARJUNA012170: TransactionStatusManager started on port 36151 and host 127.0.0.1 with service com.arjuna.ats.arjuna.recovery.ActionStatusService
+02:37:33,835 DEBUG [org.hibernate.ogm.dialect.batch.spi.OperationsQueue] - Add batched operation InsertOrUpdateTupleOperation[EntityKey(HW16_One.HW16_One.tbl_person) [id=c11a2d82-f5b8-4421-b58c-6bc231ad2433]]
+02:37:33,847 DEBUG [org.hibernate.ogm.dialect.batch.spi.OperationsQueue] - Add batched operation InsertOrUpdateTupleOperation[EntityKey(HW16_One.HW16_One.tbl_person) [id=74274798-7574-4105-903e-5a9ccc304d34]]
+02:37:33,848 DEBUG [org.hibernate.ogm.dialect.batch.spi.OperationsQueue] - Add batched operation InsertOrUpdateTupleOperation[EntityKey(HW16_One.HW16_One.tbl_person) [id=f3ac9c2a-44d7-4d32-8065-c29f4e592966]]
+02:38:03,719 INFO  [org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider] - OGM001202: Closing connection to MongoDB

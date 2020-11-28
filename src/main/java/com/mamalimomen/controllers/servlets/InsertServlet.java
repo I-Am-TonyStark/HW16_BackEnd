@@ -16,16 +16,12 @@ public class InsertServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        try (PrintWriter out = resp.getWriter()) {
+        PersonService ps = AppManager.getService(Services.PERSON_SERVICE);
+        String message = ps.createNewPerson(req);
 
-            PersonService ps = AppManager.getService(Services.PERSON_SERVICE);
-            String message = ps.createNewPerson(req);
+        req.setAttribute("message", message);
 
-            req.setAttribute("message", message);
-
-            String destPage = "insert_page.jsp";
-            RequestDispatcher dispatcher = req.getRequestDispatcher(destPage);
-            dispatcher.forward(req, resp);
-        }
+        RequestDispatcher dispatcher = req.getRequestDispatcher("insert_page.jsp");
+        dispatcher.forward(req, resp);
     }
 }

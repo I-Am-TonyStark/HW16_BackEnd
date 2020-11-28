@@ -26,18 +26,17 @@ public class SearchServlet extends HttpServlet {
         List<Person> people = ps.retrieveExistPersons(req);
 
         if (people == null) {
-            message = "wrong radio button!";
+            message = "Wrong radio button!";
         } else if (people.isEmpty()) {
-            message = "there is not any result!";
+            message = "There is not any result!";
         } else {
-            message = "here you are!";
+            message = "Here you are!";
         }
 
         req.setAttribute("message", message);
         getServletContext().setAttribute("people", people);
 
-        String destPage = "download_page.jsp";
-        RequestDispatcher dispatcher = req.getRequestDispatcher(destPage);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("download_page.jsp");
         dispatcher.forward(req, resp);
     }
 }

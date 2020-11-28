@@ -22,14 +22,14 @@
         <input type="file" name="uploaded" id="uploaded" size="50" required/>
         <hr>
         <% String message = (String) request.getAttribute("message");
-        if (message != null && !message.isEmpty()) { %>
+            if (message != null && !message.isEmpty()) { %>
         <h6><%=message%>
         </h6>
         <hr>
         <%}%>
         <div class="btn-block">
-            <p>For download or see please click <b><a href="download_page.jsp">Download</a></b> here!</p>
-            <p>For inserting manually please click <b><a href="insert_page.jsp">Insert</a></b> here!</p>
+            <h5>For search please click <b><a href="download_page.jsp">Search</a></b> here!</h5>
+            <h5>For insert manually please click <b><a href="insert_page.jsp">Insert</a></b> here!</h5>
             <button type="submit">Upload</button>
         </div>
     </form>

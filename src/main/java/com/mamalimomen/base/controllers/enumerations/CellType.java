@@ -3,19 +3,29 @@ package com.mamalimomen.base.controllers.enumerations;
 public enum CellType {
 
     /**
-     * Numeric cell type (whole numbers, fractional numbers, dates)
+     * String cell type (text).
      */
-    NUMERIC(0),
+    STRING(0),
 
     /**
-     * String (text) cell type
+     * Boolean cell type.
      */
-    STRING(1),
+    BOOLEAN(1),
 
     /**
-     * Boolean cell type
+     * Long cell type.
      */
-    BOOLEAN(2);
+    LONG(2),
+
+    /**
+     * Double cell type.
+     */
+    DOUBLE(3),
+
+    /**
+     * Date cell type.
+     */
+    DATE(4);
 
     private final int code;
 
@@ -28,7 +38,7 @@ public enum CellType {
      */
     public static CellType forInt(int code) {
         for (CellType type : values()) {
-            if (type.code == code) {
+            if (type.getCode() == code) {
                 return type;
             }
         }

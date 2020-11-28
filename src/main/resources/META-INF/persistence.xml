@@ -9,9 +9,15 @@
 
         <properties>
             <property name="hibernate.ogm.datastore.provider" value="MONGODB"/>
+            <property name="hibernate.ogm.mongodb.host" value="127.0.0.1"/>
+            <property name="hibernate.ogm.mongodb.port" value="27017"/>
             <property name="hibernate.ogm.datastore.database" value="HW16_BackEnd"/>
             <property name="hibernate.ogm.datastore.create_database" value="true"/>
-            <property name="" value=""/>
+            <property name="hibernate.ogm.datastore.grid_dialect"
+                      value="org.hibernate.ogm.datastore.mongodb.MongoDBDialect"/>
+            <property name="javax.persistence.schema-generation.database.action" value="create-drop"/>
+            <!-- <property name="hibernate.ogm.datastore.username" value="mamali"/>
+             <property name="hibernate.ogm.datastore.password" value="mamali2120"/> -->
         </properties>
     </persistence-unit>
 </persistence>

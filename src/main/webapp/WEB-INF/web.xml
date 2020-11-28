@@ -3,30 +3,42 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-    <display-name>Archetype Created Web Application</display-name>
+    <display-name>Excel Processor Web Application</display-name>
 
     <context-param>
-        <param-name>uploaded</param-name>
-        <param-value>upload/</param-value>
+        <param-name>uploadDirectory</param-name>
+        <param-value>D:\عزم راسخ\جاوا مکتب\کلاس\46\HW16_BackEnd\src\main\webapp\upload\</param-value>
         <description>uploaded files directory</description>
     </context-param>
+    <context-param>
+        <param-name>excelFilesName</param-name>
+        <param-value>people</param-value>
+    </context-param>
+    <context-param>
+        <param-name>wordFileName</param-name>
+        <param-value>document.docx</param-value>
+    </context-param>
+    <context-param>
+        <param-name>zipFileName</param-name>
+        <param-value>people.zip</param-value>
+    </context-param>
 
-    <filter>
+    <!--<filter>
         <filter-name>uploadFilter</filter-name>
         <filter-class>com.mamalimomen.controllers.filters.UploadFilter</filter-class>
-    </filter>
+    </filter>-->
     <filter>
         <filter-name>downloadFilter</filter-name>
         <filter-class>com.mamalimomen.controllers.filters.DownloadFilter</filter-class>
     </filter>
 
-    <filter-mapping>
+    <!--<filter-mapping>
         <filter-name>uploadFilter</filter-name>
-        <url-pattern>/upload</url-pattern>
-    </filter-mapping>
+        <servlet-name>upload</servlet-name>
+    </filter-mapping>-->
     <filter-mapping>
         <filter-name>downloadFilter</filter-name>
-        <url-pattern>/download</url-pattern>
+        <servlet-name>download</servlet-name>
     </filter-mapping>
 
     <listener>
@@ -37,8 +49,8 @@
         <servlet-name>upload</servlet-name>
         <servlet-class>com.mamalimomen.controllers.servlets.UploadServlet</servlet-class>
         <init-param>
-            <param-name>course</param-name>
-            <param-value>java</param-value>
+            <param-name>email</param-name>
+            <param-value>mamalimomen1996@gmail.com</param-value>
         </init-param>
     </servlet>
     <servlet>

@@ -1,27 +1,42 @@
-02:37:09,711 INFO  [org.hibernate.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [
+18:50:38,168 INFO  [org.hibernate.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [
 	name: ogm-mongodb
 	...]
-02:37:09,854 INFO  [org.hibernate.Version] - HHH000412: Hibernate Core {5.3.6.Final}
-02:37:09,857 INFO  [org.hibernate.cfg.Environment] - HHH000206: hibernate.properties not found
-02:37:10,205 INFO  [org.hibernate.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
-02:37:10,501 INFO  [org.hibernate.ogm.datastore.impl.DatastoreProviderInitiator] - OGM000016: NoSQL Datastore provider: org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider
-02:37:10,813 INFO  [org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider] - OGM001201: Connecting to MongoDB at localhost:27017 with a timeout set at 10000 millisecond(s)
+18:50:38,380 INFO  [org.hibernate.Version] - HHH000412: Hibernate Core {5.3.6.Final}
+18:50:38,385 INFO  [org.hibernate.cfg.Environment] - HHH000206: hibernate.properties not found
+18:50:38,876 INFO  [org.hibernate.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+18:50:40,181 INFO  [org.hibernate.ogm.datastore.impl.DatastoreProviderInitiator] - OGM000016: NoSQL Datastore provider: org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider
+18:50:41,580 INFO  [org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider] - OGM001201: Connecting to MongoDB at localhost:27017 with a timeout set at 10000 millisecond(s)
 SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-02:37:10,965 INFO  [org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider] - OGM001207: Connecting to Mongo database named [HW16_BackEnd].
-02:37:11,284 INFO  [org.hibernate.ogm.dialect.impl.GridDialectInitiator] - OGM000017: Grid Dialect: org.hibernate.ogm.dialect.impl.BatchOperationsDelegator
-02:37:11,286 INFO  [org.hibernate.ogm.dialect.impl.GridDialectInitiator] - Grid dialect logs are disabled
-02:37:11,295 INFO  [org.hibernate.ogm.dialect.impl.GridDialectInitiator] - OGM000017: Grid Dialect: org.hibernate.ogm.dialect.impl.BatchOperationsDelegator
-02:37:11,295 INFO  [org.hibernate.ogm.dialect.impl.GridDialectInitiator] - Grid dialect logs are disabled
-02:37:11,311 INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.ogm.dialect.impl.OgmDialect
-02:37:11,338 WARN  [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator] - HHH000342: Could not obtain connection to query metadata : null
-02:37:11,338 INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.ogm.dialect.impl.OgmDialect
-02:37:11,348 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] - HHH000422: Disabling contextual LOB creation as connection was null
-02:37:12,412 INFO  [org.hibernate.ogm.cfg.impl.Version] - OGM000001: Hibernate OGM 5.4.0.Final
-02:37:14,038 INFO  [org.hibernate.ogm.transaction.impl.OgmJtaPlatformInitiator] - OGM000075: JBoss Transaction Manager (com.arjuna.ats.jta.TransactionManager) detected on classpath. Using JBossStandAloneJtaPlatform as JTAPlatform implementation
-02:37:33,646 INFO  [com.arjuna.ats.arjuna] - ARJUNA012170: TransactionStatusManager started on port 36151 and host 127.0.0.1 with service com.arjuna.ats.arjuna.recovery.ActionStatusService
-02:37:33,835 DEBUG [org.hibernate.ogm.dialect.batch.spi.OperationsQueue] - Add batched operation InsertOrUpdateTupleOperation[EntityKey(HW16_One.HW16_One.tbl_person) [id=c11a2d82-f5b8-4421-b58c-6bc231ad2433]]
-02:37:33,847 DEBUG [org.hibernate.ogm.dialect.batch.spi.OperationsQueue] - Add batched operation InsertOrUpdateTupleOperation[EntityKey(HW16_One.HW16_One.tbl_person) [id=74274798-7574-4105-903e-5a9ccc304d34]]
-02:37:33,848 DEBUG [org.hibernate.ogm.dialect.batch.spi.OperationsQueue] - Add batched operation InsertOrUpdateTupleOperation[EntityKey(HW16_One.HW16_One.tbl_person) [id=f3ac9c2a-44d7-4d32-8065-c29f4e592966]]
-02:38:03,719 INFO  [org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider] - OGM001202: Closing connection to MongoDB
+18:50:41,818 INFO  [org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider] - OGM001207: Connecting to Mongo database named [HW16_BackEnd].
+18:50:42,292 INFO  [org.hibernate.ogm.dialect.impl.GridDialectInitiator] - OGM000017: Grid Dialect: org.hibernate.ogm.dialect.impl.BatchOperationsDelegator
+18:50:42,295 INFO  [org.hibernate.ogm.dialect.impl.GridDialectInitiator] - Grid dialect logs are disabled
+18:50:42,306 INFO  [org.hibernate.ogm.dialect.impl.GridDialectInitiator] - OGM000017: Grid Dialect: org.hibernate.ogm.dialect.impl.BatchOperationsDelegator
+18:50:42,306 INFO  [org.hibernate.ogm.dialect.impl.GridDialectInitiator] - Grid dialect logs are disabled
+18:50:42,337 INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.ogm.dialect.impl.OgmDialect
+18:50:42,379 WARN  [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator] - HHH000342: Could not obtain connection to query metadata : null
+18:50:42,379 INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.ogm.dialect.impl.OgmDialect
+18:50:42,394 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] - HHH000422: Disabling contextual LOB creation as connection was null
+18:50:43,591 INFO  [org.hibernate.ogm.cfg.impl.Version] - OGM000001: Hibernate OGM 5.4.0.Final
+18:50:44,242 INFO  [org.hibernate.ogm.transaction.impl.OgmJtaPlatformInitiator] - OGM000075: JBoss Transaction Manager (com.arjuna.ats.jta.TransactionManager) detected on classpath. Using JBossStandAloneJtaPlatform as JTAPlatform implementation
+18:50:44,395 INFO  [org.hibernate.tool.schema.internal.SchemaCreatorImpl] - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@509a4a77'
+18:51:53,976 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - loading entities from list of tuples: [com.mamalimomen.domains.Person#<null>]
+18:51:53,983 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#84c2b42f-a6e1-46f2-aba9-7270e72a2c63]
+18:51:54,012 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#ff4ef969-9c76-40d8-90a9-c9913e65e837]
+18:51:54,013 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#4aa29765-f7fe-47b3-93ae-0d88469febbb]
+18:51:54,013 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#2784b463-4022-49b4-9539-518af875a1b2]
+18:51:54,014 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#57ce1b02-c59c-4105-a13c-36d186c8fbfc]
+18:51:54,014 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#89509144-c246-461b-a935-82e482e6fb8e]
+18:51:54,014 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#9d301974-c425-4901-a7f5-ffc5fb018cb6]
+18:51:54,015 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#f8a91baf-5ef1-4819-a8d3-b5d6ead21cbc]
+18:51:54,015 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#e71e1e17-f4cd-4b97-92b3-751a1fb2926c]
+18:51:54,016 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#6af83780-787a-465e-9b06-a6535970d642]
+18:51:54,016 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#6c145acf-090c-4da1-b5dd-77ffcc6110b2]
+18:51:54,016 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#3acdb21e-82be-42ef-aded-cd765d51806a]
+18:51:54,017 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#3b81fe79-2e29-4500-ab1c-0bc89358960d]
+18:51:54,017 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#b5667cb0-70dd-4e95-bd16-b96a15ef2c1b]
+18:51:54,018 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - result row: EntityKey[com.mamalimomen.domains.Person#3248a38a-9dae-44c2-9a7d-c89c27c675ba]
+18:51:54,031 DEBUG [org.hibernate.ogm.loader.impl.OgmLoader] - done entity load
+18:54:39,039 INFO  [org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+18:54:39,043 INFO  [org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider] - OGM001202: Closing connection to MongoDB

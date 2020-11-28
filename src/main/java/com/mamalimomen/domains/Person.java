@@ -11,7 +11,7 @@ import javax.persistence.*;
 
 @Entity
 @SelectBeforeUpdate
-@Table(name = "tbl_person", catalog = "HW16_One", schema = "HW16_One")
+@Table(name = "people_collection")
 @NamedQueries({
         @NamedQuery(
                 name = "Person.findAll",
@@ -31,22 +31,23 @@ import javax.persistence.*;
 })
 public class Person extends BaseEntity implements Comparable<Person> {
 
-    @Column(index = 0, type = CellType.NUMERIC)
+    @javax.persistence.Column(name = "entity_id", nullable = false)
+    @Column(index = 0, type = CellType.LONG, name = "Id")
     private Long entityId;
 
     @javax.persistence.Column(name = "first_name", nullable = false)
-    @Column(index = 1, type = CellType.STRING)
+    @Column(index = 1, type = CellType.STRING, name = "FirstName")
     private String firstName;
 
     @javax.persistence.Column(name = "last_name", nullable = false)
-    @Column(index = 2, type = CellType.STRING)
+    @Column(index = 2, type = CellType.STRING, name = "LastName")
     private String lastName;
 
     @javax.persistence.Column(name = "phone_number", nullable = false)
-    @Column(index = 3, type = CellType.STRING)
+    @Column(index = 3, type = CellType.STRING, name = "PhoneNumber")
     private String phoneNumber;
 
-    public Person(){
+    public Person() {
         this.entityId = getCount();
     }
 
@@ -76,7 +77,10 @@ public class Person extends BaseEntity implements Comparable<Person> {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) throws InValidDataException {
+        if (!phoneNumber.matches("\\+98[0-9]{9}")) {
+            throw new InValidDataException("PhoneNumber");
+        }
         this.phoneNumber = phoneNumber;
     }
 

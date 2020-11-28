@@ -36,15 +36,16 @@ public class PersonServiceImpl extends BaseServiceImpl<String, Person, PersonRep
     @Override
     public List<Person> retrieveExistPersons(HttpServletRequest req) {
         String searchKey = req.getParameter("information");
+        String parameter = req.getParameter("search");
 
-        System.out.println(req.getParameter("search"));
-        System.out.println(req.getParameter("information"));
-
-        return switch (req.getParameter("search")) {
-            case "fName_like" -> repository.findManyPersonsByFirstNameLike(searchKey);
-            case "lName_like" -> repository.findManyPersonsByLastNameLike(searchKey);
-            case "phone_like" -> repository.findManyPersonsByPhoneNumberLike(searchKey);
-            default -> null;
-        };
+        if (parameter != null) {
+            return switch (parameter) {
+                case "fName_like" -> repository.findManyPersonsByFirstNameLike(searchKey);
+                case "lName_like" -> repository.findManyPersonsByLastNameLike(searchKey);
+                case "phone_like" -> repository.findManyPersonsByPhoneNumberLike(searchKey);
+                default -> null;
+            };
+        }
+        return null;
     }
 }

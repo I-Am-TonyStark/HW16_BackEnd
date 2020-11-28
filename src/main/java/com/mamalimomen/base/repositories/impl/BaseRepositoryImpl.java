@@ -35,7 +35,11 @@ public abstract class BaseRepositoryImpl<PK extends String, E extends BaseEntity
 
             return true;
         } catch (EntityExistsException | RollbackException ex) {
-            em.getTransaction().rollback();
+            try {
+                tm.rollback();
+            } catch (SystemException exc) {
+                exc.printStackTrace();
+            }
         } catch (NotSupportedException | SystemException | HeuristicMixedException | HeuristicRollbackException | javax.transaction.RollbackException ex) {
             ex.printStackTrace();
         }
@@ -54,7 +58,11 @@ public abstract class BaseRepositoryImpl<PK extends String, E extends BaseEntity
 
             return true;
         } catch (EntityExistsException | RollbackException ex) {
-            em.getTransaction().rollback();
+            try {
+                tm.rollback();
+            } catch (SystemException e) {
+                e.printStackTrace();
+            }
         } catch (NotSupportedException | SystemException | javax.transaction.RollbackException | HeuristicMixedException | HeuristicRollbackException ex) {
             ex.printStackTrace();
         }
@@ -73,7 +81,11 @@ public abstract class BaseRepositoryImpl<PK extends String, E extends BaseEntity
 
             return true;
         } catch (IllegalArgumentException | RollbackException ex) {
-            em.getTransaction().rollback();
+            try {
+                tm.rollback();
+            } catch (SystemException exc) {
+                exc.printStackTrace();
+            }
         } catch (NotSupportedException | SystemException | HeuristicMixedException | HeuristicRollbackException | javax.transaction.RollbackException ex) {
             ex.printStackTrace();
         }
@@ -91,7 +103,11 @@ public abstract class BaseRepositoryImpl<PK extends String, E extends BaseEntity
 
             return true;
         } catch (IllegalArgumentException | RollbackException ex) {
-            em.getTransaction().rollback();
+            try {
+                tm.rollback();
+            } catch (SystemException exc) {
+                exc.printStackTrace();
+            }
         } catch (NotSupportedException | SystemException | javax.transaction.RollbackException | HeuristicMixedException | HeuristicRollbackException ex) {
             ex.printStackTrace();
         }

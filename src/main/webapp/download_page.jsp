@@ -22,12 +22,18 @@
         <hr>
         <label id="icon" for="information"><i class="fas fa-user"></i></label>
         <input type="text" name="information" id="information" placeholder="Search Key"/><br/>
-        <label for="fName_like">FirstName</label>
-        <input type="radio" name="search" id="fName_like" checked value="fName_like"/>
-        <label for="lName_like">LastName</label>
-        <input type="radio" name="search" id="lName_like" value="lName_like"/>
-        <label for="phone_like">PhoneNumber</label>
-        <input type="radio" name="search" id="phone_like" value="phone_like"/>
+        <div class="radio_button">
+            <div>
+                <label class="radio_label" for="fName_like">FirstName</label>
+                <input type="radio" name="search" id="fName_like" value="fName_like"/></div>
+            <div>
+                <label class="radio_label" for="lName_like">LastName</label>
+                <input type="radio" name="search" id="lName_like" value="lName_like"/>
+            </div>
+            <div>
+                <label class="radio_label" for="phone_like">PhoneNumber</label>
+                <input type="radio" name="search" id="phone_like" value="phone_like"/></div>
+        </div>
         <hr>
         <% String message = (String) request.getAttribute("message");
             if (message != null && !message.isEmpty()) { %>
@@ -35,39 +41,48 @@
         </h6>
         <hr>
         <%}%>
-        <% List<Person> people = (List<Person>) request.getServletContext().getAttribute("people");
-            if (people != null && !people.isEmpty()) { %>
-        <table border="1">
-            <thead>
-            <tr>
-                <th>id</th>
-                <th>first name</th>
-                <th>last name</th>
-                <th>phone number</th>
-            </tr>
-            </thead>
-            <tbody>
-            <% for (Person person : people) {%>
-            <tr>
-                <td><%=person.getEntityId()%>
-                </td>
-                <td><%=person.getFirstName()%>
-                </td>
-                <td><%=person.getLastName()%>
-                </td>
-                <td><%=person.getPhoneNumber()%>
-                </td>
-            </tr>
-            <%}%>
-            </tbody>
-        </table>
-        <hr>
-        <%}%>
         <div class="btn-block">
-            <p>For download this persons Excel file please click <b><a href="download">Download</a></b> here!</p>
             <button type="submit">Search</button>
         </div>
     </form>
+    <form name="see" method="get" action="/HW16_BackEnd_war/download">
+        <% List<Person> people = (List<Person>) request.getServletContext().getAttribute("people");
+            if (people != null && !people.isEmpty()) { %>
+        <hr>
+        <div class="box">
+            <table border="1" cellpadding="5" cellspacing="5">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>first name</th>
+                    <th>last name</th>
+                    <th>phone number</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% for (Person person : people) {%>
+                <tr>
+                    <td><%=person.getEntityId()%>
+                    </td>
+                    <td><%=person.getFirstName()%>
+                    </td>
+                    <td><%=person.getLastName()%>
+                    </td>
+                    <td><%=person.getPhoneNumber()%>
+                    </td>
+                </tr>
+                <%}%>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <textarea name="document" id="document" cols="50" rows="4" placeholder="Write your document"
+                  required></textarea>
+        <div class="btn-block">
+            <button type="submit">Download</button>
+        </div>
+    </form>
+    <%}%>
 </div>
 </body>
 </html>

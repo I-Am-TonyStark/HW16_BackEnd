@@ -14,10 +14,15 @@ public @interface Column {
     /**
      * @return Position of the column. Starts with the 0 index.
      */
-    int index();
+    int index() default 0;
 
     /**
-     * @return inspected datatype of the column in the excelWorkbook - matched to
+     * @return Inspected datatype of the column in the excelWorkbook - matched to.
      */
-    CellType type();
+    CellType type() default CellType.STRING;
+
+    /**
+     * @return Name of head cell.
+     */
+    String name() default "";
 }

@@ -1,7 +1,5 @@
 package com.mamalimomen.base.domains;
 
-import com.mamalimomen.base.controllers.annotations.Column;
-import com.mamalimomen.base.controllers.enumerations.CellType;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.GeneratedValue;

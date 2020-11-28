@@ -1,5 +1,6 @@
 package com.mamalimomen.controllers.filters;
 
+import com.mamalimomen.base.controllers.utilities.ApachePOI;
 import com.mamalimomen.base.controllers.utilities.ApacheUpload;
 
 import javax.servlet.*;
@@ -14,8 +15,7 @@ public class UploadFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        servletRequest.setAttribute("filePath",ApacheUpload.fileUpload((HttpServletRequest) servletRequest));
-        filterChain.doFilter(servletRequest, servletResponse);
+
     }
 
     @Override

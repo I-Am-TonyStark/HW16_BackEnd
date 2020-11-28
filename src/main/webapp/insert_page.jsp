@@ -26,14 +26,14 @@
         <input type="number" name="phone_number" id="phone_number" placeholder="PhoneNumber" required/>
         <hr>
         <% String message = (String) request.getAttribute("message");
-        if (message != null && !message.isEmpty()) { %>
+            if (message != null && !message.isEmpty()) { %>
         <h6><%=message%>
         </h6>
         <hr>
         <%}%>
         <div class="btn-block">
-            <p>For download or see please click <b><a href="download_page.jsp">Download</a></b> here!</p>
-            <p>For inserting from file please click <b><a href="upload_page.jsp">Upload</a></b> here!</p>
+            <h5>For search please click <b><a href="download_page.jsp">Search</a></b> here!</h5>
+            <h5>For upload from file please click <b><a href="upload_page.jsp">Upload</a></b> here!</h5>
             <button type="submit">Insert</button>
         </div>
     </form>

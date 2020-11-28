@@ -111,12 +111,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.creditdatamw.labs</groupId>
-            <artifactId>zerocell-core</artifactId>
-            <version>LATEST</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>3.17</version>
